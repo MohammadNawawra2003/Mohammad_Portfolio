@@ -286,13 +286,21 @@ function App() {
                   Get In Touch
                 </Button>
                 <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => window.open('https://linkedin.com/in/mnawawra', '_blank')}
-                >
-                  <Download className="mr-2" size={20} />
-                  Download CV
-                </Button>
+                 variant="outline" 
+                 size="lg"
+                 onClick={() => {
+                 // Create download link for CV
+                 const link = document.createElement('a');
+                 link.href = './public/Mohammad_Nawawra_CV.pdf'; // Update this path to your CV file
+                 link.download = 'Mohammad_Nawawra_CV.pdf';
+                 document.body.appendChild(link);
+                 link.click();
+                 document.body.removeChild(link);
+                 }}
+              >
+              <Download className="mr-2" size={20} />
+              Download CV
+            </Button>
               </motion.div>
 
               <motion.div 
