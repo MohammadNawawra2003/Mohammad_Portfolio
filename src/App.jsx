@@ -291,7 +291,7 @@ function App() {
                  onClick={() => {
                  // Create download link for CV
                  const link = document.createElement('a');
-                 link.href = '/Mohammad_Nawawra_CV.pdf';
+                 link.href = './public/Mohammad_Nawawra_CV.pdf';
                  link.download = 'Mohammad_Nawawra_CV.pdf';
                  document.body.appendChild(link);
                  link.click();
