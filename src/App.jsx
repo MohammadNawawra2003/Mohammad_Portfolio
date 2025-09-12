@@ -286,15 +286,21 @@ function App() {
                   Get In Touch
                 </Button>
                 <Button 
- variant="outline" 
- size="lg"
- onClick={() => {
-   window.open('https://github.com/MohammadNawawra2003/mohammad-portfolio/blob/main/public/Mohammad%20Alnawawreh%20CV.pdf', '_blank');
- }}
->
-<Download className="mr-2" size={20} />
-View CV
-</Button>
+                variant="outline" 
+                size="lg"
+                onClick={() => {
+                const link = document.createElement('a');
+                link.href = 'https://raw.githubusercontent.com/MohammadNawawra2003/mohammad-portfolio/main/public/Mohammad%20Alnawawreh%20CV.pdf';
+                link.download = 'Mohammad Alnawawreh CV.pdf';
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }}
+          >
+             <Download className="mr-2" size={20} />
+             View CV
+             </Button>
               </motion.div>
 
               <motion.div 
