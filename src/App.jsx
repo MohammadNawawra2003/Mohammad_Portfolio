@@ -289,8 +289,8 @@ function App() {
                  variant="outline" 
                  size="lg"
                  onClick={() => {
-                 // Open CV in new tab
-                 window.open('/Mohammad Alnawawreh CV.pdf', '_blank');
+                 // Open CV from GitHub repository
+                 window.open('https://github.com/MohammadNawawra2003/mohammad-portfolio/raw/main/public/Mohammad%20Alnawawreh%20CV.pdf', '_blank');
                  }}
               >
               <Download className="mr-2" size={20} />
