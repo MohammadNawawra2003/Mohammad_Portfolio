@@ -289,18 +289,12 @@ function App() {
                  variant="outline" 
                  size="lg"
                  onClick={() => {
-                 // Create download link for CV
-                 const link = document.createElement('a');
-                 link.href = '/Mohammad Alnawawreh CV.pdf';
-                 link.download = 'Mohammad_Alnawawreh_CV.pdf';
-                 link.target = '_blank';
-                 document.body.appendChild(link);
-                 link.click();
-                 document.body.removeChild(link);
+                 // Open CV in new tab
+                 window.open('/Mohammad Alnawawreh CV.pdf', '_blank');
                  }}
               >
               <Download className="mr-2" size={20} />
-              Download CV
+              View CV
             </Button>
               </motion.div>
 
