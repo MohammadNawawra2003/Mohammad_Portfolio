@@ -292,7 +292,8 @@ function App() {
                  // Create download link for CV
                  const link = document.createElement('a');
                  link.href = '/Mohammad Alnawawreh CV.pdf';
-                 link.download = 'Mohammad Alnawawreh CV.pdf';
+                 link.download = 'Mohammad_Alnawawreh_CV.pdf';
+                 link.target = '_blank';
                  document.body.appendChild(link);
                  link.click();
                  document.body.removeChild(link);
