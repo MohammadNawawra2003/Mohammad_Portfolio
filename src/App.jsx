@@ -285,44 +285,16 @@ function App() {
                   <Mail className="mr-2" size={20} />
                   Get In Touch
                 </Button>
-                // Fixed CV download functionality - replace the existing button in your App.js
-
-// In your Hero Section, replace the existing CV button with:
-<Button 
-  variant="outline" 
-  size="lg"
-  onClick={() => {
-    // Create a link element to download the CV
-    const link = document.createElement('a');
-    // Use the correct path - assuming your CV is in the public folder
-    link.href = '/Mohammad Alnawawreh CV.pdf';
-    // Set the download attribute with the desired filename (without underscores)
-    link.download = 'Mohammad Alnawawreh CV.pdf';
-    // Append to body, click, and remove
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }}
+                <Button 
+ variant="outline" 
+ size="lg"
+ onClick={() => {
+   window.open('https://github.com/MohammadNawawra2003/mohammad-portfolio/blob/main/public/Mohammad%20Alnawawreh%20CV.pdf', '_blank');
+ }}
 >
-  <Download className="mr-2" size={20} />
-  View CV
+<Download className="mr-2" size={20} />
+View CV
 </Button>
-
-// Alternative method if you prefer to open in new tab:
-<Button 
-  variant="outline" 
-  size="lg"
-  onClick={() => {
-    window.open('/Mohammad Alnawawreh CV.pdf', '_blank');
-  }}
->
-  <Download className="mr-2" size={20} />
-  View CV
-</Button>
-
-// If your CV file is in a different location, update the path accordingly:
-// For example, if it's in src/assets: '/assets/Mohammad Alnawawreh CV.pdf'
-// For GitHub Pages: '/your-repo-name/Mohammad Alnawawreh CV.pdf'
               </motion.div>
 
               <motion.div 
