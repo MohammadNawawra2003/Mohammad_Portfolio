@@ -7,7 +7,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // This is the corrected line
-  base: '/Mohammad_Portfolio/', 
+  base: '/mohammad_portfolio/', 
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
